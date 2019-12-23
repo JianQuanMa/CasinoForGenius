@@ -8,10 +8,11 @@
 
 import Foundation
 
-enum TextToNumersError{
+enum TextToNumersError: Error{
     
     case isEmpty
     case hasRepeats
     case failToConvert
     case outOfRange
 }
+

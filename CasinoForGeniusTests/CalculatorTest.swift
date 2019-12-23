@@ -21,15 +21,18 @@ class CalculatorTest: XCTestCase {
     func testFindWinnerWithWinner(){
         let cal = Calculator()
         let ranNum = 78
+        let ranNum2 = 23
         let nums = [23,34,45,67,79,99]
-        
-        XCTAssertTrue(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum) == 79)
+        XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum) , WinnerType.exist(79))
+        XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum2) , WinnerType.exist(23))
     }
+    
     func testFindWinnerWithoutWinner(){
         let cal = Calculator()
         let ranNum = 79
         let nums = [23,34,45,67,78,80]
-        XCTAssertTrue(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum) == 79)
+        
+        XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum) , WinnerType.notExist)
     }
     
     func testIsContainDeplicateWithDuplicates(){
