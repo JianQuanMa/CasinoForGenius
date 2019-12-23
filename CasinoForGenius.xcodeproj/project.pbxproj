@@ -14,6 +14,12 @@
 		4EAB002523AD861F005468B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB002423AD861F005468B5 /* Assets.xcassets */; };
 		4EAB002823AD861F005468B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB002623AD861F005468B5 /* LaunchScreen.storyboard */; };
 		4EAB003323AD8620005468B5 /* CasinoForGeniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB003223AD8620005468B5 /* CasinoForGeniusTests.swift */; };
+		4EAB004023AD934E005468B5 /* NumberInputValidTextClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB003D23AD9051005468B5 /* NumberInputValidTextClass.swift */; };
+		4EAB004523AD9BE8005468B5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB004423AD9BE8005468B5 /* String+Extension.swift */; };
+		4EAB004823ADAAB5005468B5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB004723ADAAB5005468B5 /* Errors.swift */; };
+		4EAB004B23ADC1B8005468B5 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB004A23ADC1B8005468B5 /* Calculator.swift */; };
+		4EAB004D23ADC31E005468B5 /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB004C23ADC31E005468B5 /* CalculatorTest.swift */; };
+		4EABCA3523B04EA300411484 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCA3423B04EA300411484 /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,12 @@
 		4EAB002E23AD8620005468B5 /* CasinoForGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasinoForGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAB003223AD8620005468B5 /* CasinoForGeniusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasinoForGeniusTests.swift; sourceTree = "<group>"; };
 		4EAB003423AD8620005468B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EAB003D23AD9051005468B5 /* NumberInputValidTextClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberInputValidTextClass.swift; sourceTree = "<group>"; };
+		4EAB004423AD9BE8005468B5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4EAB004723ADAAB5005468B5 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		4EAB004A23ADC1B8005468B5 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		4EAB004C23ADC31E005468B5 /* CalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTest.swift; sourceTree = "<group>"; };
+		4EABCA3423B04EA300411484 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,9 @@
 		4EAB001A23AD861F005468B5 /* CasinoForGenius */ = {
 			isa = PBXGroup;
 			children = (
+				4EAB004923ADC1AC005468B5 /* Calculator */,
+				4EAB004623ADAA92005468B5 /* Enums */,
+				4EAB004123AD9AE1005468B5 /* Extensions */,
 				4EAB001B23AD861F005468B5 /* AppDelegate.swift */,
 				4EAB001D23AD861F005468B5 /* SceneDelegate.swift */,
 				4EAB001F23AD861F005468B5 /* ViewController.swift */,
@@ -94,9 +109,36 @@
 			isa = PBXGroup;
 			children = (
 				4EAB003223AD8620005468B5 /* CasinoForGeniusTests.swift */,
+				4EAB003D23AD9051005468B5 /* NumberInputValidTextClass.swift */,
 				4EAB003423AD8620005468B5 /* Info.plist */,
+				4EAB004C23ADC31E005468B5 /* CalculatorTest.swift */,
 			);
 			path = CasinoForGeniusTests;
+			sourceTree = "<group>";
+		};
+		4EAB004123AD9AE1005468B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB004423AD9BE8005468B5 /* String+Extension.swift */,
+				4EABCA3423B04EA300411484 /* Int+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EAB004623ADAA92005468B5 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB004723ADAAB5005468B5 /* Errors.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		4EAB004923ADC1AC005468B5 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB004A23ADC1B8005468B5 /* Calculator.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EAB002023AD861F005468B5 /* ViewController.swift in Sources */,
+				4EAB004823ADAAB5005468B5 /* Errors.swift in Sources */,
 				4EAB001C23AD861F005468B5 /* AppDelegate.swift in Sources */,
+				4EABCA3523B04EA300411484 /* Int+Extension.swift in Sources */,
+				4EAB004523AD9BE8005468B5 /* String+Extension.swift in Sources */,
 				4EAB001E23AD861F005468B5 /* SceneDelegate.swift in Sources */,
+				4EAB004B23ADC1B8005468B5 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAB004023AD934E005468B5 /* NumberInputValidTextClass.swift in Sources */,
+				4EAB004D23ADC31E005468B5 /* CalculatorTest.swift in Sources */,
 				4EAB003323AD8620005468B5 /* CasinoForGeniusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
