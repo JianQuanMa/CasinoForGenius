@@ -58,10 +58,13 @@ extension ViewController: UITextFieldDelegate{
 
 extension ViewController: UITextViewDelegate{
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let digitSet = NSCharacterSet(charactersIn: "0123456789, ").inverted
+        let digitSet = NSCharacterSet(charactersIn: "0123456789,").inverted
         let componentsSeperatedByCharInSet = text.components(separatedBy: digitSet)
         let numberFilted = componentsSeperatedByCharInSet.joined(separator: "")
         return text == numberFilted
     }
 }
 
+protocol ViewControllerProtocol {
+    func convertTextToNumbers(text: String) -> [Int]
+}

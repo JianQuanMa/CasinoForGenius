@@ -9,7 +9,6 @@
 import Foundation
 
 enum TextToNumersError: Error{
-    
     case isEmpty
     case hasRepeats
     case failToConvert

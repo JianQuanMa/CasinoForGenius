@@ -5,7 +5,7 @@
 //  Created by Jian Ma on 12/23/19.
 //  Copyright © 2019 Jian Ma. All rights reserved.
 //
-
+@testable import CasinoForGenius
 import XCTest
 
 class TextConversionTest: XCTestCase {
@@ -23,11 +23,11 @@ class TextConversionTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testTextConversion(){
+        let vc = ViewController()
+        let text = "23,45,12,2,23"
+        let expectedResult = [23,45,12,2,23]
+      
     }
-
+    
 }

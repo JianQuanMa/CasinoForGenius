@@ -21,7 +21,7 @@
 		4EAB004D23ADC31E005468B5 /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB004C23ADC31E005468B5 /* CalculatorTest.swift */; };
 		4EABCA3523B04EA300411484 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCA3423B04EA300411484 /* Int+Extension.swift */; };
 		4EABCA3923B090B600411484 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCA3823B090B600411484 /* Winner.swift */; };
-		4EABCA3B23B1125E00411484 /* TextConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCA3A23B1125E00411484 /* TextConversionTest.swift */; };
+		4EABCA3D23B1193200411484 /* TextConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCA3A23B1125E00411484 /* TextConversionTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,7 +265,7 @@
 			files = (
 				4EAB004023AD934E005468B5 /* NumberInputValidTextClass.swift in Sources */,
 				4EAB004D23ADC31E005468B5 /* CalculatorTest.swift in Sources */,
-				4EABCA3B23B1125E00411484 /* TextConversionTest.swift in Sources */,
+				4EABCA3D23B1193200411484 /* TextConversionTest.swift in Sources */,
 				4EAB003323AD8620005468B5 /* CasinoForGeniusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
