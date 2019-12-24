@@ -22,9 +22,4 @@ class NumberInputValidTextClass: XCTestCase {
     }
     
 
-    func testRangeValidTest(){
-        
-        
-    }
-
 }

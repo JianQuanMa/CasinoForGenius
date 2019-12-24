@@ -23,5 +23,14 @@ extension String{
         if self.isEmpty { throw StringToIntError.emptyStringError}
         if Int(self) == nil { throw StringToIntError.failToConvertError}
         return Int(self)!
-        }
     }
+    //convert text to int array
+    func convertToIntArray() -> [Int]{
+        let texts = self.split(separator: ",")
+        let array = texts.map{numtext in
+            return Int(numtext)!
+        }
+        return array
+    }
+    
+}

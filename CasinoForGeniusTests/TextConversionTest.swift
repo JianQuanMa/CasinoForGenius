@@ -23,11 +23,5 @@ class TextConversionTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testTextConversion(){
-        let vc = ViewController()
-        let text = "23,45,12,2,23"
-        let expectedResult = [23,45,12,2,23]
-      
-    }
     
 }

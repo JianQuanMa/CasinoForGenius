@@ -43,6 +43,22 @@ class Calculator{
     func isContainDeplicates(sortedNums: [Int]) -> Bool{
         return sortedNums.count != Set(sortedNums).count
     }
+
     
-    
+    func calculateAndAnalyize(min: Int, max: Int, text: String) -> WinnerType{
+        
+        let sortedInputIntArray = text.convertToIntArray().sorted()
+        guard sortedInputIntArray.checkBoundary(from: min, to: max) else{return .inputOutOfBoundaries}
+        
+        var ranNum: Int!
+        var resultWinner: WinnerType = .notExist
+        
+        repeat{
+            ranNum = generateRandomNumber(from: min, to: max)
+            resultWinner = findWinner(sortedNumbers: sortedInputIntArray, generatedNum: ranNum)
+        }while(
+            resultWinner == .notExist
+        )
+        return resultWinner
+    }
 }

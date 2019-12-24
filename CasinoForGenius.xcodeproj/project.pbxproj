@@ -95,12 +95,12 @@
 		4EAB001A23AD861F005468B5 /* CasinoForGenius */ = {
 			isa = PBXGroup;
 			children = (
+				4EABCA3F23B17D5200411484 /* ViewControllers */,
 				4EAB004923ADC1AC005468B5 /* Calculator */,
 				4EAB004623ADAA92005468B5 /* Enums */,
 				4EAB004123AD9AE1005468B5 /* Extensions */,
 				4EAB001B23AD861F005468B5 /* AppDelegate.swift */,
 				4EAB001D23AD861F005468B5 /* SceneDelegate.swift */,
-				4EAB001F23AD861F005468B5 /* ViewController.swift */,
 				4EAB002123AD861F005468B5 /* Main.storyboard */,
 				4EAB002423AD861F005468B5 /* Assets.xcassets */,
 				4EAB002623AD861F005468B5 /* LaunchScreen.storyboard */,
@@ -145,6 +145,14 @@
 				4EAB004A23ADC1B8005468B5 /* Calculator.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		4EABCA3F23B17D5200411484 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EAB001F23AD861F005468B5 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

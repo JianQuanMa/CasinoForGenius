@@ -19,3 +19,14 @@ extension Int{
         return (self - num).absoluteValue
     }
 }
+
+extension Array where Element == Int {
+    func checkBoundary(from min: Int, to max: Int) -> Bool{
+        for num in self{
+            if num < min || num > max{
+                return false
+            }
+        }
+        return true
+    }
+}

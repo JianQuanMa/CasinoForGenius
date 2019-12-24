@@ -12,4 +12,13 @@ import Foundation
 enum WinnerType: Equatable{
     case exist(Int)
     case notExist
+    case inputOutOfBoundaries
+    func getValue() -> Int {
+        switch self{
+        case .exist(let intValue):
+            return intValue
+        case .notExist, .inputOutOfBoundaries:
+            return -1
+        }
+    }
 }

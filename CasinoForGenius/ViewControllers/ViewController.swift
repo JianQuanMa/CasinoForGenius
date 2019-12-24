@@ -18,9 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputTextView: UITextView!
     private var isInclusive: Bool?
     private var isIntOnly: Bool?
+    var cal: Calculator!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        cal = Calculator()
         setUptextFields()
         setUpTextView()
         
@@ -33,16 +34,46 @@ class ViewController: UIViewController {
     private func setUpTextView(){
         self.inputTextView.delegate = self
     }
-    private func convertTextToNumbers(text: String) -> [Int]{
-        
-        
-        return []
+    private func prompt(messsage: String){
+        self.promptLabel.text = messsage
+    }
+    
+    private func displayWarning(type: inputError){
+        var string: String!
+        switch type {
+        case .minMissing:
+            string = "lower boundary missing!"
+        case .maxMissing:
+            string = "upper boundary missing!"
+        case .textMissing:
+            string = "no numbers chosen"
+        case .inputOutOfBoundaries:
+            string = "input out of boundaries"
+        }
+        prompt(messsage: string)
     }
     
     //MARK: UI Actions
     @IBAction func submitButtonTapped(_ sender: UIButton) {
+        if self.minTextField.text?.isEmpty ?? true {displayWarning(type: .minMissing); return }
+        if self.maxTextField.text?.isEmpty ?? true {displayWarning(type: .maxMissing); return }
+        if self.inputTextView.text?.isEmpty ?? true {displayWarning(type: .textMissing); return}
+        do{ let result = cal.calculateAndAnalyize(min: try self.minTextField.text!.intValue(), max: try self.maxTextField.text!.intValue(), text: self.inputTextView.text)
+            var displayString: String!
+            switch result {
+            case .inputOutOfBoundaries:
+                displayString = "check your input, it is out of boundaries"
+            case .exist(let intValue):
+                displayString = "the winner is \(intValue)"
+            case .notExist:
+                displayString = "an error has ocurred!"
+            }
+            prompt(messsage: displayString)
+        }catch {}
         
     }
+    
+    
     
     
 }
@@ -63,8 +94,4 @@ extension ViewController: UITextViewDelegate{
         let numberFilted = componentsSeperatedByCharInSet.joined(separator: "")
         return text == numberFilted
     }
-}
-
-protocol ViewControllerProtocol {
-    func convertTextToNumbers(text: String) -> [Int]
 }

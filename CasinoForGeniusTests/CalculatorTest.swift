@@ -51,6 +51,14 @@ class CalculatorTest: XCTestCase {
         let nums:[Int] = []
         XCTAssertFalse(cal.isContainDeplicates(sortedNums: nums))
     }
+    func testTextConversion(){
+         let cal = Calculator()
+      //   let text = "23,45,12,2,23"
+         let text = ",,12,,23,34,22,12,,,"
+         let expectedresult = [12,23,34,22,12]
+         print(text.split(separator: ","))
+        XCTAssertEqual(cal.convertToIntArray(from: text), expectedresult)
+     }
     
     
 }
