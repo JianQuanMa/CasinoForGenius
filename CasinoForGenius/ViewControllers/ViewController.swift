@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         setUpTextView()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     //MARK: helper funcs
     private func setUptextFields(){
         self.minTextField.delegate = self
@@ -38,7 +46,7 @@ class ViewController: UIViewController {
         self.promptLabel.text = messsage
     }
     
-    private func displayWarning(type: inputError){
+    private func displayWarning(type: InputError){
         var string: String!
         switch type {
         case .minMissing:

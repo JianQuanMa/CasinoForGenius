@@ -15,7 +15,7 @@ enum TextToNumersError: Error{
     case outOfRange
 }
 
-enum inputError: Error{
+enum InputError: Error{
     case minMissing
     case maxMissing
     case textMissing

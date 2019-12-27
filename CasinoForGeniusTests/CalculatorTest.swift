@@ -9,9 +9,9 @@
 import XCTest
 
 class CalculatorTest: XCTestCase {
-
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let cal = Calculator()
     }
 
     override func tearDown() {
@@ -27,14 +27,19 @@ class CalculatorTest: XCTestCase {
         XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum2) , WinnerType.exist(23))
     }
     
-    func testFindWinnerWithoutWinner(){
+    func testFindWinnerWithWinner2(){
         let cal = Calculator()
         let ranNum = 79
-        let nums = [23,34,45,67,78,80]
-        
-        XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum) , WinnerType.notExist)
+        let nums = [1,2,3,4,5,34]
+        XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum), WinnerType.exist(34))
+       
     }
-    
+    func testFindWinnerWithoutWinner(){
+        let cal = Calculator()
+        let ranNum = 78
+        let nums = [23,34,45,67,79,77]
+        XCTAssertEqual(cal.findWinner(sortedNumbers: nums, generatedNum: ranNum), WinnerType.notExist)
+    }
     func testIsContainDeplicateWithDuplicates(){
         let cal = Calculator()
         let nums = [1,2,3,3,4]
@@ -52,12 +57,11 @@ class CalculatorTest: XCTestCase {
         XCTAssertFalse(cal.isContainDeplicates(sortedNums: nums))
     }
     func testTextConversion(){
-         let cal = Calculator()
       //   let text = "23,45,12,2,23"
          let text = ",,12,,23,34,22,12,,,"
          let expectedresult = [12,23,34,22,12]
          print(text.split(separator: ","))
-        XCTAssertEqual(cal.convertToIntArray(from: text), expectedresult)
+        XCTAssertEqual(text.convertToIntArray(), expectedresult)
      }
     
     

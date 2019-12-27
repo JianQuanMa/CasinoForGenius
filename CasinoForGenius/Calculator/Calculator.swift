@@ -25,13 +25,16 @@ class Calculator{
             return .exist(generatedNum)
         }
         
-        var closetGap = sortedNumbers.last!
-        var tempWinner = sortedNumbers.first!
+        var closetGap = IntegerLiteralType.max
+        
+        var tempWinner: Int!
         
         for num in sortedNumbers{
             if generatedNum.absoluteDistance(from: num) < closetGap{
                 closetGap = generatedNum.absoluteDistance(from: num)
                 tempWinner = num
+                print("abs gap " , generatedNum.absoluteDistance(from: num))
+                
             }else if generatedNum.absoluteDistance(from: num) == closetGap{
                 return .notExist
             }
@@ -55,7 +58,9 @@ class Calculator{
         
         repeat{
             ranNum = generateRandomNumber(from: min, to: max)
+            
             resultWinner = findWinner(sortedNumbers: sortedInputIntArray, generatedNum: ranNum)
+            print("the random number is: \(ranNum) and winner is: \(resultWinner)")
         }while(
             resultWinner == .notExist
         )
