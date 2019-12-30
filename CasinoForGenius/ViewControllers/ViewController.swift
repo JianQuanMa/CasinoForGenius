@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         cal = Calculator()
         setUptextFields()
         setUpTextView()
-        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
